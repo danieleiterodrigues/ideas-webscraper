@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 async function buscarVideos(keyword, maxVideos = 10) {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     executablePath: '/usr/bin/google-chrome-stable',
   });
